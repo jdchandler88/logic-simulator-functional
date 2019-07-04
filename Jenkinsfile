@@ -19,7 +19,7 @@ pipeline {
         always {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/scaladoc/', reportFiles: 'index-all.html', reportName: 'Scaladoc'])
             junit 'build/test-results/**/*.xml'
-            step([$class: 'ScoveragePublisher', reportDir: 'build/scoverage/', reportFile: 'scoverage.coverage.xml'])
+            step([$class: 'ScoveragePublisher', reportDir: 'build/scoverage', reportFile: 'scoverage.coverage.xml'])
         }
     }
 }
