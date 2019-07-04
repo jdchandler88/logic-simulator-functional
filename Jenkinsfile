@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
 				script {
-				    executeGradleTask("clean build scaladoc")
+				    executeGradleTask("clean build scaladoc reportScoverage")
 				}
             }
         }
