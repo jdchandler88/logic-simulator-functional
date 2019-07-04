@@ -14,3 +14,4 @@ class LibrarySuite extends FunSuite {
     assert(library.someLibraryMethod)
   }
 }
+

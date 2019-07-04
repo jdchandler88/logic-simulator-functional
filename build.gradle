@@ -9,6 +9,8 @@
 plugins {
     // Apply the scala plugin to add support for Scala
     id 'scala'
+    id 'idea'
+    id "org.scoverage" version "3.1.5"
 }
 
 repositories {
@@ -36,3 +38,6 @@ test {
         events "standardOut", "passed", "skipped", "failed"
     }
 }
+
+compileScala.targetCompatibility = 1.8
+ScalaCompileOptions.metaClass.useAnt = false
