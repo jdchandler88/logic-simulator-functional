@@ -17,9 +17,9 @@ pipeline {
     }
     post {
         always {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/javadoc/', reportFiles: 'index-all.html', reportName: 'Scaladoc'])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/scaladoc/', reportFiles: 'index-all.html', reportName: 'Scaladoc'])
             junit 'build/test-results/**/*.xml'
-            jacoco exclusionPattern: '**/*Test*.class'
+            step([$class: 'ScoveragePublisher', reportDir: 'build/scoverage/', reportFile: 'scoverage-coverage.xml'])
         }
     }
 }
