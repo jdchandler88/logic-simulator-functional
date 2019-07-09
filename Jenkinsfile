@@ -20,6 +20,7 @@ pipeline {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/scaladoc/', reportFiles: 'index-all.html', reportName: 'Scaladoc'])
             junit 'build/test-results/**/*.xml'
             step([$class: 'ScoveragePublisher', reportDir: 'build/reports/scoverage', reportFile: 'scoverage.xml'])
+            cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'build/reports/scoverage/cobertura.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
         }
     }
 }
