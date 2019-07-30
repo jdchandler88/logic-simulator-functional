@@ -2,7 +2,8 @@ pipeline {
     agent any
 	environment {
     	MAVEN_CREDS = credentials('mavenCreds')
-    }
+    	GIT_SSH = "${env.WORKSPACE}/custom_ssh"	//this points to a script that runs ssh. allows us to configure ssh
+	}
 	tools {
 	    gradle 'gradle-5.4.1'
 	}
@@ -10,17 +11,16 @@ pipeline {
         stage('build') {
             steps {
 				script {
-				    executeGradleTask("clean build scaladoc reportScoverage")
+				    executeGradleTask("clean build javadoc")
 				}
             }
         }
     }
     post {
         always {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/scaladoc/', reportFiles: 'index-all.html', reportName: 'Scaladoc'])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/docs/javadoc/', reportFiles: 'index-all.html', reportName: 'Javadoc'])
             junit 'build/test-results/**/*.xml'
-            step([$class: 'ScoveragePublisher', reportDir: 'build/reports/scoverage', reportFile: 'scoverage.xml'])
-            cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'build/reports/scoverage/cobertura.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+            jacoco exclusionPattern: '**/*Test*.class'
         }
     }
 }
