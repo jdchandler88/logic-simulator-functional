@@ -3,11 +3,13 @@
  */
 package com.darchan.logic.simulator.functional;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class AppTest {
-    @Test public void testAppHasAGreeting() {
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+class AppTest {
+    @Test
+    void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
