@@ -72,10 +72,10 @@ public final class Components {
     /**
      * Encode an array of booleans into a binary number. For instance, a truth table for a 4-bit array is as follows
      *
-     * 0001 -> 00
-     * 0010 -> 01
-     * 0100 -> 10
-     * 1000 -> 11
+     * 0001 -- 00
+     * 0010 -- 01
+     * 0100 -- 10
+     * 1000 -- 11
      *
      * Note that inputs should be widths of powers of 2 (2, 4, 8, ...)
      *

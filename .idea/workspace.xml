@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d00136ec-e1ef-4f93-84e1-426fe4771524" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -99,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="481">
+              <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4355#4356#0" expanded="true" />
@@ -108,6 +104,24 @@
                 <element signature="e#3445#3446#0" expanded="true" />
                 <element signature="e#3497#3498#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -167,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderInputWidthException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" />
       </list>
     </option>
   </component>
@@ -217,15 +231,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="functional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logic-simulator-functional" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logic-simulator-functional" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="functional" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="logic-simulator-functional" type="b2602c69:ProjectViewProjectNode" />
@@ -397,7 +402,7 @@
       <workItem from="1562210130745" duration="145000" />
       <workItem from="1562210339673" duration="3797000" />
       <workItem from="1562640623660" duration="8000" />
-      <workItem from="1564518369710" duration="13517000" />
+      <workItem from="1564518369710" duration="13722000" />
     </task>
     <task id="LOCAL-00001" summary="setting build.gradle so that intellij can run coverage. required unsetting ant as tool">
       <created>1562211137957</created>
@@ -476,13 +481,17 @@
       <option name="project" value="LOCAL" />
       <updated>1564526126657</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="created encoder and associated tests">
+      <created>1564542748759</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1564542748759</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Components_RegisterTest_shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength - 2019.07.30 at 18h 33m 39s.xml">
-      <configuration name="Components_RegisterTest.shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Components_RegisterTest_shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength - 2019.07.30 at 18h 34m 40s.xml">
       <configuration name="Components_RegisterTest.shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength" configurationId="JUnit" />
     </history-entry>
@@ -510,9 +519,12 @@
     <history-entry file="Validations_EncodeTest - 2019.07.30 at 23h 10m 21s.xml">
       <configuration name="Validations_EncodeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_logic-simulator-functional_test - 2019.07.30 at 23h 10m 52s.xml">
+      <configuration name="All in logic-simulator-functional.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21081000" />
+    <option name="totallyTimeSpent" value="21286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -527,7 +539,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24863686" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24863686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,7 +550,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.08178844" />
+      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.35441658" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -561,7 +573,8 @@
     <MESSAGE value="initializing app. switched from Scala to Java. It's enough to learn functional programming in a familiar language. Maybe we'll port this to Scala or Haskell later." />
     <MESSAGE value="created and gate and all associated tests" />
     <MESSAGE value="created register and all associated tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="created register and all associated tests" />
+    <MESSAGE value="created encoder and associated tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="created encoder and associated tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test__2_.ic" NAME="All in logic-simulator-functional.test (2) Coverage Results" MODIFIED="1562209792652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -782,20 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -828,10 +827,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="481">
+          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4355#4356#0" expanded="true" />
