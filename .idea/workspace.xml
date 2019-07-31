@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d00136ec-e1ef-4f93-84e1-426fe4771524" name="Default Changelist" comment="created register and all associated tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/RegisterInputWidthMismatchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/exception/RegisterInputWidthMismatchExceptionTest.java" afterDir="false" />
+    <list default="true" id="d00136ec-e1ef-4f93-84e1-426fe4771524" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/ComponentsAndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -97,37 +96,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="345">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4355#4356#0" expanded="true" />
+                <element signature="e#4382#4383#0" expanded="true" />
+                <element signature="e#3445#3446#0" expanded="true" />
+                <element signature="e#3497#3498#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,7 +164,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/ComponentsAndTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderInputWidthException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" />
       </list>
     </option>
   </component>
@@ -303,51 +296,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Components_RegisterTest.shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength">
-    <configuration name="Components_RegisterTest.registerLatchesWhenItShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in logic-simulator-functional.test">
+    <configuration name="All in logic-simulator-functional.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logic-simulator-functional.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_RegisterTest" />
-      <option name="METHOD_NAME" value="registerLatchesWhenItShould(boolean,boolean,boolean[],boolean[],boolean[])" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Components_RegisterTest.shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_RegisterTest" />
-      <option name="METHOD_NAME" value="shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull(boolean[],boolean[])" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Components_RegisterTest.shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_RegisterTest" />
-      <option name="METHOD_NAME" value="shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength(boolean[],boolean[])" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -368,17 +321,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterInputWidthMismatchExceptionTest.messageShouldBeExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Validations_EncodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logic-simulator-functional.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.exception.*" />
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.exception" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.exception.RegisterInputWidthMismatchExceptionTest" />
-      <option name="METHOD_NAME" value="messageShouldBeExpected" />
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Validations_EncodeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Validations_EncodeTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Validations_EncodeTest" />
+      <option name="METHOD_NAME" value="test(boolean[],boolean[])" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Validations_EncodeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Validations_EncodeTest" />
+      <option name="METHOD_NAME" value="test(boolean[])" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -386,11 +370,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in logic-simulator-functional.test" />
+        <item itemvalue="JUnit.Validations_EncodeTest" />
+        <item itemvalue="JUnit.Validations_EncodeTest.test (1)" />
+        <item itemvalue="JUnit.Validations_EncodeTest.test" />
         <item itemvalue="JUnit.Components_RegisterTest.shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength" />
-        <item itemvalue="JUnit.Components_RegisterTest.shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength" />
-        <item itemvalue="JUnit.Components_RegisterTest.shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull" />
-        <item itemvalue="JUnit.Components_RegisterTest.registerLatchesWhenItShould" />
-        <item itemvalue="JUnit.RegisterInputWidthMismatchExceptionTest.messageShouldBeExpected" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +397,7 @@
       <workItem from="1562210130745" duration="145000" />
       <workItem from="1562210339673" duration="3797000" />
       <workItem from="1562640623660" duration="8000" />
-      <workItem from="1564518369710" duration="7743000" />
+      <workItem from="1564518369710" duration="13517000" />
     </task>
     <task id="LOCAL-00001" summary="setting build.gradle so that intellij can run coverage. required unsetting ant as tool">
       <created>1562211137957</created>
@@ -485,49 +469,56 @@
       <option name="project" value="LOCAL" />
       <updated>1564523351573</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="created register and all associated tests">
+      <created>1564526126657</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564526126657</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComponentsAndTest_shouldReturnExpectedValue - 2019.07.30 at 17h 44m 01s.xml">
-      <configuration name="ComponentsAndTest.shouldReturnExpectedValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentsAndTest_shouldReturnExpectedValue - 2019.07.30 at 17h 44m 27s.xml">
-      <configuration name="ComponentsAndTest.shouldReturnExpectedValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentsAndTest - 2019.07.30 at 17h 46m 03s.xml">
-      <configuration name="ComponentsAndTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentsAndTest - 2019.07.30 at 17h 46m 44s.xml">
-      <configuration name="ComponentsAndTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComponentsAndTest_shouldReturnExpectedValue - 2019.07.30 at 17h 48m 01s.xml">
-      <configuration name="ComponentsAndTest.shouldReturnExpectedValue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterInputWidthMismatchExceptionTest_messageShouldBeExpected - 2019.07.30 at 18h 16m 20s.xml">
-      <configuration name="RegisterInputWidthMismatchExceptionTest.messageShouldBeExpected" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Components_RegisterTest_registerLatchesWhenItShould - 2019.07.30 at 18h 29m 33s.xml">
-      <configuration name="Components_RegisterTest.registerLatchesWhenItShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Components_RegisterTest_shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull - 2019.07.30 at 18h 32m 11s.xml">
-      <configuration name="Components_RegisterTest.shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Components_RegisterTest_shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength - 2019.07.30 at 18h 33m 39s.xml">
       <configuration name="Components_RegisterTest.shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Components_RegisterTest_shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength - 2019.07.30 at 18h 34m 40s.xml">
       <configuration name="Components_RegisterTest.shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 45m 53s.xml">
+      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 47m 26s.xml">
+      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 47m 56s.xml">
+      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 57m 58s.xml">
+      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test_(1) - 2019.07.30 at 23h 01m 34s.xml">
+      <configuration name="Validations_EncodeTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test_(1) - 2019.07.30 at 23h 05m 02s.xml">
+      <configuration name="Validations_EncodeTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest_test_(1) - 2019.07.30 at 23h 06m 02s.xml">
+      <configuration name="Validations_EncodeTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Validations_EncodeTest - 2019.07.30 at 23h 10m 21s.xml">
+      <configuration name="Validations_EncodeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15307000" />
+    <option name="totallyTimeSpent" value="21081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2544346" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20898004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -536,7 +527,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44492912" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24863686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -547,18 +538,18 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.3805889" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.08178844" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" sideWeight="0.7429578" visible="true" weight="0.35144123" />
+      <window_info anchor="right" id="Gradle" order="6" sideWeight="0.7434679" weight="0.35144123" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.25704226" side_tool="true" visible="true" weight="0.35144123" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.25714287" side_tool="true" visible="true" weight="0.35144123" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,10 +566,13 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test__2_.ic" NAME="All in logic-simulator-functional.test (2) Coverage Results" MODIFIED="1562209792652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/logic_simulator_functional$ScalaTests_in__test_.ic" NAME="ScalaTests in 'test' Coverage Results" MODIFIED="1562210753173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test.ic" NAME="All in logic-simulator-functional.test Coverage Results" MODIFIED="1562209516376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$Validations_EncodeTest_test__1_.ic" NAME="Validations_EncodeTest.test (1) Coverage Results" MODIFIED="1564542360280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$Validations_ValidateWidthTest.ic" NAME="Validations_ValidateWidthTest Coverage Results" MODIFIED="1564522250341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test.ic" NAME="All in logic-simulator-functional.test Coverage Results" MODIFIED="1564542649444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/logic_simulator_functional$InvalidRangeExceptionTest.ic" NAME="InvalidRangeExceptionTest Coverage Results" MODIFIED="1564521030891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.exception.*</FILTER>
     </SUITE>
@@ -589,6 +583,9 @@
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$ComponentsAndTest.ic" NAME="ComponentsAndTest Coverage Results" MODIFIED="1564523202030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$Validations_EncodeTest.ic" NAME="Validations_EncodeTest Coverage Results" MODIFIED="1564542619935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$InvalidRangeExceptionTest_errorMessageShouldBeExpected.ic" NAME="InvalidRangeExceptionTest.errorMessageShouldBeExpected Coverage Results" MODIFIED="1564521874837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -618,6 +615,9 @@
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$Components_RegisterTest_registerLatchesWhenItShould.ic" NAME="Components_RegisterTest.registerLatchesWhenItShould Coverage Results" MODIFIED="1564525772140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$Validations_EncodeTest_test.ic" NAME="Validations_EncodeTest.test Coverage Results" MODIFIED="1564541876776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
   </component>
@@ -782,15 +782,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -804,12 +806,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="195">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4355#4356#0" expanded="true" />
+            <element signature="e#4382#4383#0" expanded="true" />
+            <element signature="e#3445#3446#0" expanded="true" />
+            <element signature="e#3497#3498#0" expanded="true" />
           </folding>
         </state>
       </provider>
