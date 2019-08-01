@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d00136ec-e1ef-4f93-84e1-426fe4771524" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderDecoderInputWidthException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/EncoderInputWidthException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncodeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -96,39 +95,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
+                <element signature="e#1666#1667#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3445#3446#0" expanded="true" />
-                <element signature="e#3497#3498#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecodeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncodeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,6 +183,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_EncodeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecodeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java" />
       </list>
     </option>
   </component>
@@ -298,16 +303,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in logic-simulator-functional.test (1)">
+  <component name="RunManager" selected="JUnit.Components_XorTest">
     <configuration name="All in logic-simulator-functional.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in logic-simulator-functional.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logic-simulator-functional.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -330,37 +327,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Components_DecodeTest.encodeReturnsExpectedValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_DecodeTest" />
-      <option name="METHOD_NAME" value="encodeReturnsExpectedValue(boolean[],boolean[])" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Components_EncodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_EncodeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Components_EncodeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logic-simulator-functional.test" />
       <extension name="coverage">
@@ -377,13 +343,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Components_OrTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_OrTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Components_OrTest.orShouldReturnExpectedValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_OrTest" />
+      <option name="METHOD_NAME" value="orShouldReturnExpectedValue(boolean[],boolean)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Components_XorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_XorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Components_XorTest" />
+        <item itemvalue="JUnit.Components_OrTest" />
+        <item itemvalue="JUnit.Components_OrTest.orShouldReturnExpectedValue" />
         <item itemvalue="JUnit.All in logic-simulator-functional.test (1)" />
         <item itemvalue="JUnit.Components_DecodeTest" />
-        <item itemvalue="JUnit.Components_DecodeTest.encodeReturnsExpectedValue" />
-        <item itemvalue="JUnit.All in logic-simulator-functional.test" />
-        <item itemvalue="JUnit.Components_EncodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +418,7 @@
       <workItem from="1562210130745" duration="145000" />
       <workItem from="1562210339673" duration="3797000" />
       <workItem from="1562640623660" duration="8000" />
-      <workItem from="1564518369710" duration="16245000" />
+      <workItem from="1564518369710" duration="17755000" />
     </task>
     <task id="LOCAL-00001" summary="setting build.gradle so that intellij can run coverage. required unsetting ant as tool">
       <created>1562211137957</created>
@@ -492,19 +504,17 @@
       <option name="project" value="LOCAL" />
       <updated>1564542748759</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="documenting encoder/decoder functions">
+      <created>1564619326894</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1564619326894</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 47m 56s.xml">
-      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Validations_EncodeTest_test - 2019.07.30 at 22h 57m 58s.xml">
-      <configuration name="Validations_EncodeTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Validations_EncodeTest_test_(1) - 2019.07.30 at 23h 01m 34s.xml">
-      <configuration name="Validations_EncodeTest.test (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Validations_EncodeTest_test_(1) - 2019.07.30 at 23h 05m 02s.xml">
       <configuration name="Validations_EncodeTest.test (1)" configurationId="JUnit" />
     </history-entry>
@@ -526,15 +536,24 @@
     <history-entry file="Components_DecodeTest - 2019.07.31 at 20h 15m 55s.xml">
       <configuration name="Components_DecodeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_logic-simulator-functional_test_(1) - 2019.07.31 at 20h 19m 21s.xml">
+      <configuration name="All in logic-simulator-functional.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Components_OrTest_orShouldReturnExpectedValue - 2019.07.31 at 20h 37m 35s.xml">
+      <configuration name="Components_OrTest.orShouldReturnExpectedValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Components_OrTest - 2019.07.31 at 20h 39m 22s.xml">
+      <configuration name="Components_OrTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23809000" />
+    <option name="totallyTimeSpent" value="25319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20898004" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20898004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -543,7 +562,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39040348" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39040348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -578,7 +597,8 @@
     <MESSAGE value="created and gate and all associated tests" />
     <MESSAGE value="created register and all associated tests" />
     <MESSAGE value="created encoder and associated tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="created encoder and associated tests" />
+    <MESSAGE value="documenting encoder/decoder functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="documenting encoder/decoder functions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/logic_simulator_functional$Components_DecodeTest.ic" NAME="Components_DecodeTest Coverage Results" MODIFIED="1564618553715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -601,6 +621,9 @@
     <SUITE FILE_PATH="coverage/logic_simulator_functional$Validations_EncodeTest.ic" NAME="Validations_EncodeTest Coverage Results" MODIFIED="1564542619935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$Components_XorTest.ic" NAME="Components_XorTest Coverage Results" MODIFIED="1564620264648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$logic_simulator_functional_in_logic_simulator_functional_test.ic" NAME="logic.simulator.functional in logic-simulator-functional.test Coverage Results" MODIFIED="1562208445206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>logic.simulator.functional.*</FILTER>
     </SUITE>
@@ -619,6 +642,9 @@
       <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test__2_.ic" NAME="All in logic-simulator-functional.test (2) Coverage Results" MODIFIED="1562209792652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/logic_simulator_functional$Components_OrTest_orShouldReturnExpectedValue.ic" NAME="Components_OrTest.orShouldReturnExpectedValue Coverage Results" MODIFIED="1564619853824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.darchan.logic.simulator.functional.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/logic_simulator_functional$InvalidRangeExceptionTest.ic" NAME="InvalidRangeExceptionTest Coverage Results" MODIFIED="1564521030891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.darchan.logic.simulator.functional.exception.*</FILTER>
     </SUITE>
@@ -841,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncodeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecodeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -861,14 +877,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncodeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        <state relative-caret-position="15">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3445#3446#0" expanded="true" />
-            <element signature="e#3497#3498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
           </folding>
         </state>
       </provider>

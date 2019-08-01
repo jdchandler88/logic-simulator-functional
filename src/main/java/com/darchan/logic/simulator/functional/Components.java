@@ -23,7 +23,7 @@ public final class Components {
     /**
      * valid input range for an xor gate
      */
-    private static final Range XOR_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
+    private static final Range XOR_INPUT_RANGE = new Range(2, 2);
 
     /**
      * valid input range for a register
@@ -54,6 +54,32 @@ public final class Components {
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
                 .allMatch(signal -> signal);
+    }
+
+    /**
+     * Or gate function
+     * @param input input signals
+     * @return evaluation of signals. True if ANY inputs are true, false otherwise
+     * @throws IllegalArgumentException if input is null
+     * @throws RangeValidationException if input width is less than 2
+     */
+    public static boolean or(boolean[] input) {
+        validateNullAndWidth(input, OR_INPUT_RANGE);
+        return IntStream.range(0, input.length)
+                .mapToObj(i -> input[i])
+                .anyMatch(signal -> signal);
+    }
+
+    /**
+     * Xor gate function
+     * @param input input signals
+     * @return evaluation of signals. True if inputs are different, false otherwise
+     * @throws IllegalArgumentException if input is null
+     * @throws RangeValidationException if input width is NOT EXACTLY 2
+     */
+    public static boolean xor(boolean[] input) {
+        validateNullAndWidth(input, XOR_INPUT_RANGE);
+        return input[0] ^ input[1];
     }
 
     /**
