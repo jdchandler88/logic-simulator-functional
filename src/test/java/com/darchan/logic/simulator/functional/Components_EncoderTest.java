@@ -1,6 +1,8 @@
 package com.darchan.logic.simulator.functional;
 
-import com.darchan.logic.simulator.functional.exception.RangeValidationException;
+import com.darchan.logic.simulator.functional.exception.EncoderInputWidthException;
+import com.darchan.logic.simulator.functional.exception.InvalidEncoderInputValueException;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,12 +12,12 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class Components_DecodeTest {
+class Components_EncoderTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void encodeReturnsExpectedValue(boolean[] expected, boolean[] input) {
-        assertArrayEquals(expected, Components.decode(input));
+    void encodeShouldHaveExpectedOutput(boolean[] input, boolean[] expected) {
+        assertArrayEquals(expected, Components.encoder(input));
     }
 
     static Stream<Arguments> getInputs() {
@@ -39,17 +41,24 @@ class Components_DecodeTest {
         );
     }
 
-    @ParameterizedTest
-    @MethodSource("getInputsForExceptions")
-    void encodeShouldThrowAppropriateException(Class clazz, boolean[] input) {
-        assertThrows(clazz, () -> Components.decode(input));
+    @Test
+    void shouldThrowExceptionIfInputIsNull() {
+        assertThrows(IllegalArgumentException.class, () -> Components.encoder(null));
     }
 
-    static Stream<Arguments> getInputsForExceptions() {
-        return Stream.of(
-            Arguments.of(IllegalArgumentException.class, null),
-            Arguments.of(RangeValidationException.class, new boolean[0])
-        );
+    @Test
+    void shouldThrowExceptionIfInputIsNotAPowerOfTwo() {
+        assertThrows(EncoderInputWidthException.class, () -> Components.encoder(new boolean[3]));
+    }
+
+    @Test
+    void shouldThrowExceptionIfNoInputsAreOn() {
+        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new boolean[]{false, false}));
+    }
+
+    @Test
+    void shouldThrowExceptionIfMoreThanOneInputIsOn() {
+        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new boolean[]{true, true}));
     }
 
 }

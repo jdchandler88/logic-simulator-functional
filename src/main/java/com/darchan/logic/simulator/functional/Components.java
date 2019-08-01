@@ -40,6 +40,11 @@ public final class Components {
      */
     private static final Range DECODER_INPUT_RANGE = new Range(1, Integer.MAX_VALUE);
 
+    /**
+     * valid input range for full adder
+     */
+    private static final Range FULL_ADDER_INPUT_RANGE = new Range(3, 3);
+
     private Components() {}
 
     /**
@@ -49,7 +54,7 @@ public final class Components {
      * @throws IllegalArgumentException if input is null
      * @throws RangeValidationException if input width is less than 2
      */
-    public static boolean and(boolean[] input) {
+    public static boolean and(boolean... input) {
         validateNullAndWidth(input, AND_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
@@ -63,7 +68,7 @@ public final class Components {
      * @throws IllegalArgumentException if input is null
      * @throws RangeValidationException if input width is less than 2
      */
-    public static boolean or(boolean[] input) {
+    public static boolean or(boolean... input) {
         validateNullAndWidth(input, OR_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
@@ -77,7 +82,7 @@ public final class Components {
      * @throws IllegalArgumentException if input is null
      * @throws RangeValidationException if input width is NOT EXACTLY 2
      */
-    public static boolean xor(boolean[] input) {
+    public static boolean xor(boolean... input) {
         validateNullAndWidth(input, XOR_INPUT_RANGE);
         return input[0] ^ input[1];
     }
@@ -125,7 +130,7 @@ public final class Components {
      * @throws RangeValidationException if toEncode's length is less than 2
      * @throws EncoderInputWidthException if toEncode's width is NOT a power of 2
      */
-    public static boolean[] encode(boolean[] toEncode) {
+    public static boolean[] encoder(boolean[] toEncode) {
         validateNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
         //input width must be power of two
         if (toEncode.length < 2 || !isPowerOfTwo(toEncode.length)) {
@@ -172,7 +177,7 @@ public final class Components {
      * @throws IllegalArgumentException if toDecode is null
      * @throws RangeValidationException if toDecode's length less than 1
      */
-    public static boolean[] decode(boolean[] toDecode) {
+    public static boolean[] decoder(boolean[] toDecode) {
         validateNullAndWidth(toDecode, DECODER_INPUT_RANGE);
         //create decoded output initialized to false
         int outputWidth = 1 << toDecode.length;
@@ -188,6 +193,26 @@ public final class Components {
         //turn that bit on and return the value
         decoded[sum] = true;
         return decoded;
+    }
+
+    /**
+     * Full adder
+     * @param inputs inputs to add. inputs[0]=a, inputs[1]=b, inputs[2]=cIn
+     * @return output: output[0]=sum, output[1]=cOut
+     * @throws IllegalArgumentException if inputs is null
+     * @throws RangeValidationException if input width is not exactly 3
+     */
+    public static boolean[] fullAdder(boolean[] inputs) {
+        validateNullAndWidth(inputs, FULL_ADDER_INPUT_RANGE);
+        boolean a = inputs[0];
+        boolean b = inputs[1];
+        boolean cin = inputs[2];
+
+        boolean[] outputs = new boolean[2];
+        boolean aXorB = xor(a, b);
+        outputs[0] = xor(cin, aXorB);
+        outputs[1] = or(and(aXorB, cin), and(a, b));
+        return outputs;
     }
 
     private static boolean[] validateNullAndWidth(boolean[] input, Range range) {

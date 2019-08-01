@@ -1,8 +1,6 @@
 package com.darchan.logic.simulator.functional;
 
-import com.darchan.logic.simulator.functional.exception.EncoderInputWidthException;
-import com.darchan.logic.simulator.functional.exception.InvalidEncoderInputValueException;
-import org.junit.jupiter.api.Test;
+import com.darchan.logic.simulator.functional.exception.RangeValidationException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,12 +10,12 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class Components_EncodeTest {
+class Components_DecoderTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void encodeShouldHaveExpectedOutput(boolean[] input, boolean[] expected) {
-        assertArrayEquals(expected, Components.encode(input));
+    void encodeReturnsExpectedValue(boolean[] expected, boolean[] input) {
+        assertArrayEquals(expected, Components.decoder(input));
     }
 
     static Stream<Arguments> getInputs() {
@@ -41,24 +39,17 @@ class Components_EncodeTest {
         );
     }
 
-    @Test
-    void shouldThrowExceptionIfInputIsNull() {
-        assertThrows(IllegalArgumentException.class, () -> Components.encode(null));
+    @ParameterizedTest
+    @MethodSource("getInputsForExceptions")
+    void encodeShouldThrowAppropriateException(Class clazz, boolean[] input) {
+        assertThrows(clazz, () -> Components.decoder(input));
     }
 
-    @Test
-    void shouldThrowExceptionIfInputIsNotAPowerOfTwo() {
-        assertThrows(EncoderInputWidthException.class, () -> Components.encode(new boolean[3]));
-    }
-
-    @Test
-    void shouldThrowExceptionIfNoInputsAreOn() {
-        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encode(new boolean[]{false, false}));
-    }
-
-    @Test
-    void shouldThrowExceptionIfMoreThanOneInputIsOn() {
-        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encode(new boolean[]{true, true}));
+    static Stream<Arguments> getInputsForExceptions() {
+        return Stream.of(
+            Arguments.of(IllegalArgumentException.class, null),
+            Arguments.of(RangeValidationException.class, new boolean[0])
+        );
     }
 
 }
