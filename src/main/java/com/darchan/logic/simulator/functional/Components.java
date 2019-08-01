@@ -16,6 +16,16 @@ public final class Components {
     private static final Range AND_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
 
     /**
+     * valid input range for an or gate
+     */
+    private static final Range OR_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
+
+    /**
+     * valid input range for an xor gate
+     */
+    private static final Range XOR_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
+
+    /**
      * valid input range for a register
      */
     private static final Range REGISTER_INPUT_RANGE = new Range(1, Integer.MAX_VALUE);
@@ -85,6 +95,9 @@ public final class Components {
      *
      * @param toEncode array to encode
      * @return encoded binary number
+     * @throws IllegalArgumentException if toEncode is null
+     * @throws RangeValidationException if toEncode's length is less than 2
+     * @throws EncoderInputWidthException if toEncode's width is NOT a power of 2
      */
     public static boolean[] encode(boolean[] toEncode) {
         validateNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
@@ -120,6 +133,19 @@ public final class Components {
         return encoded;
     }
 
+    /**
+     * Decode an array of booleans into an array of booleans. For instance, a truth table for a 4-bit array is as follows
+     *
+     * 00 -- 0001
+     * 01 -- 0010
+     * 10 -- 0100
+     * 11 -- 1000
+     *
+     * @param toDecode array to decode
+     * @return encoded binary number
+     * @throws IllegalArgumentException if toDecode is null
+     * @throws RangeValidationException if toDecode's length less than 1
+     */
     public static boolean[] decode(boolean[] toDecode) {
         validateNullAndWidth(toDecode, DECODER_INPUT_RANGE);
         //create decoded output initialized to false
