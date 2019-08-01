@@ -39,7 +39,7 @@ class Components_OrTest {
 
     @ParameterizedTest
     @MethodSource("getInputsForExceptions")
-    void orShouldThrowException(Class<? extends Throwable>, boolean[] input) {
+    void orShouldThrowException(Class<? extends Throwable> clazz, boolean[] input) {
         assertThrows(clazz, () -> Components.or(input));
     }
 
