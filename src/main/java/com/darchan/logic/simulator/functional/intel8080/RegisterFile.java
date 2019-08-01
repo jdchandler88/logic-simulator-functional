@@ -14,6 +14,11 @@ public class RegisterFile {
      */
     private final Range REGISTER_WIDTH = new Range(8, 8);
 
+    /**
+     * allowed width for program counter and stack pointer
+     */
+    private final Range PC_SP_WIDTH = new Range(16, 16);
+
     private final boolean[] f;
 
     private final boolean[] a;
@@ -30,6 +35,10 @@ public class RegisterFile {
 
     private final boolean[] l;
 
+    private final boolean[] pc;
+
+    private final boolean[] sp;
+
     /**
      * Creates register file with the specified input data
      * @param f flags
@@ -40,8 +49,10 @@ public class RegisterFile {
      * @param e low word for DE register pair
      * @param h high word for HL register pair
      * @param l low word for HL register pair
+     * @param pc program counter
+     * @param sp stack pointer
      */
-    public RegisterFile(boolean[] f, boolean[] a, boolean[] b, boolean[] c, boolean[] d, boolean[] e, boolean[] h, boolean[] l) {
+    public RegisterFile(boolean[] f, boolean[] a, boolean[] b, boolean[] c, boolean[] d, boolean[] e, boolean[] h, boolean[] l, boolean[] pc, boolean[] sp) {
         this.f = Components.validateNotNullAndWidth(f, REGISTER_WIDTH);
         this.a = Components.validateNotNullAndWidth(a, REGISTER_WIDTH);
         this.b = Components.validateNotNullAndWidth(b, REGISTER_WIDTH);
@@ -50,6 +61,8 @@ public class RegisterFile {
         this.e = Components.validateNotNullAndWidth(e, REGISTER_WIDTH);
         this.h = Components.validateNotNullAndWidth(h, REGISTER_WIDTH);
         this.l = Components.validateNotNullAndWidth(l, REGISTER_WIDTH);
+        this.pc = Components.validateNotNullAndWidth(pc, PC_SP_WIDTH);
+        this.sp = Components.validateNotNullAndWidth(sp, PC_SP_WIDTH);
     }
 
     /**
@@ -124,5 +137,21 @@ public class RegisterFile {
      */
     public boolean[] getL() {
         return l;
+    }
+
+    /**
+     * Gets program counter
+     * @return
+     */
+    public boolean[] getPc() {
+        return pc;
+    }
+
+    /**
+     * Gets stack pointer
+     * @return
+     */
+    public boolean[] getSp() {
+        return sp;
     }
 }
