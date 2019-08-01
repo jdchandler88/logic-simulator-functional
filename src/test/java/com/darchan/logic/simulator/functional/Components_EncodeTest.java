@@ -1,6 +1,6 @@
 package com.darchan.logic.simulator.functional;
 
-import com.darchan.logic.simulator.functional.exception.EncoderDecoderInputWidthException;
+import com.darchan.logic.simulator.functional.exception.EncoderInputWidthException;
 import com.darchan.logic.simulator.functional.exception.InvalidEncoderInputValueException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class Validations_EncodeTest {
+class Components_EncodeTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
@@ -48,7 +48,7 @@ class Validations_EncodeTest {
 
     @Test
     void shouldThrowExceptionIfInputIsNotAPowerOfTwo() {
-        assertThrows(EncoderDecoderInputWidthException.class, () -> Components.encode(new boolean[3]));
+        assertThrows(EncoderInputWidthException.class, () -> Components.encode(new boolean[3]));
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.darchan.logic.simulator.functional;
 
-import com.darchan.logic.simulator.functional.exception.EncoderDecoderInputWidthException;
+import com.darchan.logic.simulator.functional.exception.EncoderInputWidthException;
 import com.darchan.logic.simulator.functional.exception.InvalidEncoderInputValueException;
 import com.darchan.logic.simulator.functional.exception.RegisterInputWidthMismatchException;
 import com.darchan.logic.simulator.functional.exception.RangeValidationException;
@@ -21,10 +21,14 @@ public final class Components {
     private static final Range REGISTER_INPUT_RANGE = new Range(1, Integer.MAX_VALUE);
 
     /**
-     * valid input range for encoder/decoder modules
+     * valid input range for encoder module
      */
-    private static final Range ENCODER_DECODER_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
+    private static final Range ENCODER_INPUT_RANGE = new Range(2, Integer.MAX_VALUE);
 
+    /**
+     * valid input range for decoder module
+     */
+    private static final Range DECODER_INPUT_RANGE = new Range(1, Integer.MAX_VALUE);
 
     private Components() {}
 
@@ -83,10 +87,10 @@ public final class Components {
      * @return encoded binary number
      */
     public static boolean[] encode(boolean[] toEncode) {
-        validateNullAndWidth(toEncode, ENCODER_DECODER_INPUT_RANGE);
+        validateNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
         //input width must be power of two
         if (toEncode.length < 2 || !isPowerOfTwo(toEncode.length)) {
-            throw new EncoderDecoderInputWidthException(toEncode.length);
+            throw new EncoderInputWidthException(toEncode.length);
         }
         //one and only one input should be on
         if (IntStream.range(0, toEncode.length)
@@ -117,7 +121,21 @@ public final class Components {
     }
 
     public static boolean[] decode(boolean[] toDecode) {
-        return null;
+        validateNullAndWidth(toDecode, DECODER_INPUT_RANGE);
+        //create decoded output initialized to false
+        int outputWidth = 1 << toDecode.length;
+        boolean[] decoded = new boolean[outputWidth];
+        Arrays.fill(decoded, false);
+
+        //what is the number represented by the encoded input?
+        int sum = 0;
+        for (int i=0; i<toDecode.length; i++) {
+            int toAdd = toDecode[i] ? (1 << i) : 0;
+            sum += toAdd;
+        }
+        //turn that bit on and return the value
+        decoded[sum] = true;
+        return decoded;
     }
 
     private static boolean[] validateNullAndWidth(boolean[] input, Range range) {
