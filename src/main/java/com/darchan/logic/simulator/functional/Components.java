@@ -55,7 +55,7 @@ public final class Components {
      * @throws RangeValidationException if input width is less than 2
      */
     public static boolean and(boolean... input) {
-        validateNullAndWidth(input, AND_INPUT_RANGE);
+        validateNotNullAndWidth(input, AND_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
                 .allMatch(signal -> signal);
@@ -69,7 +69,7 @@ public final class Components {
      * @throws RangeValidationException if input width is less than 2
      */
     public static boolean or(boolean... input) {
-        validateNullAndWidth(input, OR_INPUT_RANGE);
+        validateNotNullAndWidth(input, OR_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
                 .anyMatch(signal -> signal);
@@ -83,7 +83,7 @@ public final class Components {
      * @throws RangeValidationException if input width is NOT EXACTLY 2
      */
     public static boolean xor(boolean... input) {
-        validateNullAndWidth(input, XOR_INPUT_RANGE);
+        validateNotNullAndWidth(input, XOR_INPUT_RANGE);
         return input[0] ^ input[1];
     }
 
@@ -100,8 +100,8 @@ public final class Components {
      */
     public static boolean[] register(boolean previousClock, boolean currentClock, boolean[] previousInput, boolean[] currentInput) {
         //validate inputs: not null, width, and width match
-        validateNullAndWidth(previousInput, REGISTER_INPUT_RANGE);
-        validateNullAndWidth(currentInput, REGISTER_INPUT_RANGE);
+        validateNotNullAndWidth(previousInput, REGISTER_INPUT_RANGE);
+        validateNotNullAndWidth(currentInput, REGISTER_INPUT_RANGE);
         if (previousInput.length != currentInput.length) {
             throw new RegisterInputWidthMismatchException(previousInput.length, currentInput.length);
         }
@@ -131,7 +131,7 @@ public final class Components {
      * @throws EncoderInputWidthException if toEncode's width is NOT a power of 2
      */
     public static boolean[] encoder(boolean[] toEncode) {
-        validateNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
+        validateNotNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
         //input width must be power of two
         if (toEncode.length < 2 || !isPowerOfTwo(toEncode.length)) {
             throw new EncoderInputWidthException(toEncode.length);
@@ -178,7 +178,7 @@ public final class Components {
      * @throws RangeValidationException if toDecode's length less than 1
      */
     public static boolean[] decoder(boolean[] toDecode) {
-        validateNullAndWidth(toDecode, DECODER_INPUT_RANGE);
+        validateNotNullAndWidth(toDecode, DECODER_INPUT_RANGE);
         //create decoded output initialized to false
         int outputWidth = 1 << toDecode.length;
         boolean[] decoded = new boolean[outputWidth];
@@ -203,7 +203,7 @@ public final class Components {
      * @throws RangeValidationException if input width is not exactly 3
      */
     public static boolean[] fullAdder(boolean[] inputs) {
-        validateNullAndWidth(inputs, FULL_ADDER_INPUT_RANGE);
+        validateNotNullAndWidth(inputs, FULL_ADDER_INPUT_RANGE);
         boolean a = inputs[0];
         boolean b = inputs[1];
         boolean cin = inputs[2];
@@ -215,7 +215,7 @@ public final class Components {
         return outputs;
     }
 
-    private static boolean[] validateNullAndWidth(boolean[] input, Range range) {
+    public static boolean[] validateNotNullAndWidth(boolean[] input, Range range) {
         return Validations.validateWidthInRange(Validations.validateNotNull(input), range);
     }
 
