@@ -15,26 +15,26 @@ class Components_AndTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void shouldReturnExpectedValue(boolean[] input, boolean expected) {
+    void shouldReturnExpectedValue(Boolean[] input, boolean expected) {
         assertEquals(expected, Components.and(input));
     }
 
     static Stream<Arguments> getInputs() {
         return Stream.of(
-                Arguments.of(new boolean[]{false, false}, false),
-                Arguments.of(new boolean[]{false, true}, false),
-                Arguments.of(new boolean[]{true, false}, false),
-                Arguments.of(new boolean[]{true, true}, true),
+                Arguments.of(new Boolean[]{false, false}, false),
+                Arguments.of(new Boolean[]{false, true}, false),
+                Arguments.of(new Boolean[]{true, false}, false),
+                Arguments.of(new Boolean[]{true, true}, true),
 
 
-                Arguments.of(new boolean[]{false, false, false}, false),
-                Arguments.of(new boolean[]{false, false, true}, false),
-                Arguments.of(new boolean[]{false, true, false}, false),
-                Arguments.of(new boolean[]{false, true, true}, false),
-                Arguments.of(new boolean[]{true, false, false}, false),
-                Arguments.of(new boolean[]{true, false, true}, false),
-                Arguments.of(new boolean[]{true, true, false}, false),
-                Arguments.of(new boolean[]{true, true, true}, true)
+                Arguments.of(new Boolean[]{false, false, false}, false),
+                Arguments.of(new Boolean[]{false, false, true}, false),
+                Arguments.of(new Boolean[]{false, true, false}, false),
+                Arguments.of(new Boolean[]{false, true, true}, false),
+                Arguments.of(new Boolean[]{true, false, false}, false),
+                Arguments.of(new Boolean[]{true, false, true}, false),
+                Arguments.of(new Boolean[]{true, true, false}, false),
+                Arguments.of(new Boolean[]{true, true, true}, true)
         );
     }
 
@@ -45,7 +45,7 @@ class Components_AndTest {
 
     @Test
     void shouldThrowInvalidRangeExceptionIfInputWidthIsLessThan2() {
-        assertThrows(RangeValidationException.class, () -> Components.and(new boolean[1]));
+        assertThrows(RangeValidationException.class, () -> Components.and(new Boolean[1]));
     }
 
 }

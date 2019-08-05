@@ -54,7 +54,7 @@ public final class Components {
      * @throws IllegalArgumentException if input is null
      * @throws RangeValidationException if input width is less than 2
      */
-    public static boolean and(boolean... input) {
+    public static boolean and(Boolean... input) {
         validateNotNullAndWidth(input, AND_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
@@ -68,7 +68,7 @@ public final class Components {
      * @throws IllegalArgumentException if input is null
      * @throws RangeValidationException if input width is less than 2
      */
-    public static boolean or(boolean... input) {
+    public static boolean or(Boolean... input) {
         validateNotNullAndWidth(input, OR_INPUT_RANGE);
         return IntStream.range(0, input.length)
                 .mapToObj(i -> input[i])
@@ -77,14 +77,21 @@ public final class Components {
 
     /**
      * Xor gate function
-     * @param input input signals
+     * @param a input a
+     * @param b input b
      * @return evaluation of signals. True if inputs are different, false otherwise
-     * @throws IllegalArgumentException if input is null
-     * @throws RangeValidationException if input width is NOT EXACTLY 2
      */
-    public static boolean xor(boolean... input) {
-        validateNotNullAndWidth(input, XOR_INPUT_RANGE);
-        return input[0] ^ input[1];
+    public static boolean xor(Boolean a, Boolean b) {
+        return a ^ b;
+    }
+
+    /**
+     * Inverter function
+     * @param input input
+     * @return inverted input
+     */
+    public static boolean not(Boolean input) {
+        return !input;
     }
 
     /**
@@ -98,7 +105,7 @@ public final class Components {
      * @throws RangeValidationException if previousInput or currentInput are 0-length
      * @throws RegisterInputWidthMismatchException if previousInput and currentInput lengths differ
      */
-    public static boolean[] register(boolean previousClock, boolean currentClock, boolean[] previousInput, boolean[] currentInput) {
+    public static Boolean[] register(boolean previousClock, boolean currentClock, Boolean[] previousInput, Boolean[] currentInput) {
         //validate inputs: not null, width, and width match
         validateNotNullAndWidth(previousInput, REGISTER_INPUT_RANGE);
         validateNotNullAndWidth(currentInput, REGISTER_INPUT_RANGE);
@@ -130,7 +137,7 @@ public final class Components {
      * @throws RangeValidationException if toEncode's length is less than 2
      * @throws EncoderInputWidthException if toEncode's width is NOT a power of 2
      */
-    public static boolean[] encoder(boolean[] toEncode) {
+    public static Boolean[] encoder(Boolean[] toEncode) {
         validateNotNullAndWidth(toEncode, ENCODER_INPUT_RANGE);
         //input width must be power of two
         if (toEncode.length < 2 || !isPowerOfTwo(toEncode.length)) {
@@ -156,7 +163,7 @@ public final class Components {
 
         //use the width to create the signal and calculate which signals are on
         int encodedWidth = power;
-        boolean[] encoded = new boolean[encodedWidth];
+        Boolean[] encoded = new Boolean[encodedWidth];
         for (int i=0; i<encodedWidth; i++) {
             encoded[i] = ((1 << i) & selectedIdx) > 0;
         }
@@ -177,11 +184,11 @@ public final class Components {
      * @throws IllegalArgumentException if toDecode is null
      * @throws RangeValidationException if toDecode's length less than 1
      */
-    public static boolean[] decoder(boolean[] toDecode) {
+    public static Boolean[] decoder(Boolean[] toDecode) {
         validateNotNullAndWidth(toDecode, DECODER_INPUT_RANGE);
         //create decoded output initialized to false
         int outputWidth = 1 << toDecode.length;
-        boolean[] decoded = new boolean[outputWidth];
+        Boolean[] decoded = new Boolean[outputWidth];
         Arrays.fill(decoded, false);
 
         //what is the number represented by the encoded input?
@@ -202,20 +209,20 @@ public final class Components {
      * @throws IllegalArgumentException if inputs is null
      * @throws RangeValidationException if input width is not exactly 3
      */
-    public static boolean[] fullAdder(boolean[] inputs) {
+    public static Boolean[] fullAdder(Boolean[] inputs) {
         validateNotNullAndWidth(inputs, FULL_ADDER_INPUT_RANGE);
         boolean a = inputs[0];
         boolean b = inputs[1];
         boolean cin = inputs[2];
 
-        boolean[] outputs = new boolean[2];
+        Boolean[] outputs = new Boolean[2];
         boolean aXorB = xor(a, b);
         outputs[0] = xor(cin, aXorB);
         outputs[1] = or(and(aXorB, cin), and(a, b));
         return outputs;
     }
 
-    public static boolean[] validateNotNullAndWidth(boolean[] input, Range range) {
+    public static Boolean[] validateNotNullAndWidth(Boolean[] input, Range range) {
         return Validations.validateWidthInRange(Validations.validateNotNull(input), range);
     }
 

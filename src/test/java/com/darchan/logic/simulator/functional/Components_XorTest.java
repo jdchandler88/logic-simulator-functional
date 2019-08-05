@@ -15,30 +15,17 @@ class Components_XorTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void xorShouldReturnExpected(boolean[] inputs, boolean expected) {
-        assertEquals(expected, Components.xor(inputs));
+    void xorShouldReturnExpected(Boolean[] inputs, boolean expected) {
+        assertEquals(expected, Components.xor(inputs[0], inputs[1]));
     }
 
     static Stream<Arguments> getInputs() {
         return Stream.of(
-                Arguments.of(new boolean[]{false, false}, false),
-                Arguments.of(new boolean[]{true, false}, true),
-                Arguments.of(new boolean[]{false, true}, true),
-                Arguments.of(new boolean[]{true, true}, false)
+                Arguments.of(new Boolean[]{false, false}, false),
+                Arguments.of(new Boolean[]{true, false}, true),
+                Arguments.of(new Boolean[]{false, true}, true),
+                Arguments.of(new Boolean[]{true, true}, false)
         );
     }
 
-    @ParameterizedTest
-    @MethodSource("getInputsForExceptions")
-    void xorShouldThrowException(Class<? extends Throwable> clazz, boolean[] inputs) {
-        assertThrows(clazz, () -> Components.xor(inputs));
-    }
-
-    static Stream<Arguments> getInputsForExceptions() {
-        return Stream.of(
-            Arguments.of(IllegalArgumentException.class, null),
-            Arguments.of(RangeValidationException.class, new boolean[1]),
-            Arguments.of(RangeValidationException.class, new boolean[3])
-        );
-    }
 }

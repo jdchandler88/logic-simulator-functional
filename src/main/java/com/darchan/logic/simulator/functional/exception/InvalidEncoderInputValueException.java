@@ -16,7 +16,7 @@ public class InvalidEncoderInputValueException extends RuntimeException {
      * Creates exception with invalid input
      * @param input invalid input
      */
-    public InvalidEncoderInputValueException(boolean[] input) {
+    public InvalidEncoderInputValueException(Boolean[] input) {
         super(String.format(ERROR_MESSAGE_TEMPLATE, Arrays.toString(input)));
     }
 

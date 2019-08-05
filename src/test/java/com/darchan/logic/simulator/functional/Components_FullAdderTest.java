@@ -14,34 +14,34 @@ class Components_FullAdderTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void fullAdderShouldReturnExpected(boolean[] inputs, boolean[] expected) {
+    void fullAdderShouldReturnExpected(Boolean[] inputs, Boolean[] expected) {
         assertArrayEquals(expected, Components.fullAdder(inputs));
     }
 
     static Stream<Arguments> getInputs() {
         return Stream.of(
-            Arguments.of(new boolean[]{false, false, false}, new boolean[]{false, false}),
-            Arguments.of(new boolean[]{true, false, false}, new boolean[]{true, false}),
-            Arguments.of(new boolean[]{false, true, false}, new boolean[]{true, false}),
-            Arguments.of(new boolean[]{true, true, false}, new boolean[]{false, true}),
-            Arguments.of(new boolean[]{false, false, true}, new boolean[]{true, false}),
-            Arguments.of(new boolean[]{true, false, true}, new boolean[]{false, true}),
-            Arguments.of(new boolean[]{false, true, true}, new boolean[]{false, true}),
-            Arguments.of(new boolean[]{true, true, true}, new boolean[]{true, true})
+            Arguments.of(new Boolean[]{false, false, false}, new Boolean[]{false, false}),
+            Arguments.of(new Boolean[]{true, false, false}, new Boolean[]{true, false}),
+            Arguments.of(new Boolean[]{false, true, false}, new Boolean[]{true, false}),
+            Arguments.of(new Boolean[]{true, true, false}, new Boolean[]{false, true}),
+            Arguments.of(new Boolean[]{false, false, true}, new Boolean[]{true, false}),
+            Arguments.of(new Boolean[]{true, false, true}, new Boolean[]{false, true}),
+            Arguments.of(new Boolean[]{false, true, true}, new Boolean[]{false, true}),
+            Arguments.of(new Boolean[]{true, true, true}, new Boolean[]{true, true})
         );
     }
 
     @ParameterizedTest
     @MethodSource("getInputsForExceptions")
-    void fullAdderShouldThrowException(Class<? extends Throwable> clazz, boolean[] inputs) {
+    void fullAdderShouldThrowException(Class<? extends Throwable> clazz, Boolean[] inputs) {
         assertThrows(clazz, () -> Components.fullAdder(inputs));
     }
 
     static Stream<Arguments> getInputsForExceptions() {
         return Stream.of(
                 Arguments.of(IllegalArgumentException.class, null),
-                Arguments.of(RangeValidationException.class, new boolean[2]),
-                Arguments.of(RangeValidationException.class, new boolean[4])
+                Arguments.of(RangeValidationException.class, new Boolean[2]),
+                Arguments.of(RangeValidationException.class, new Boolean[4])
         );
     }
 

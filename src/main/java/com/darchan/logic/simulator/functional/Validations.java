@@ -18,7 +18,7 @@ public final class Validations {
      * @param range range used to validate
      * @return input if it passes validation
      */
-    public static boolean[] validateWidthInRange(boolean[] input, Range range) {
+    public static Boolean[] validateWidthInRange(Boolean[] input, Range range) {
         Validations.validateNotNull(input);
         Validations.validateNotNull(range);
         if (input.length > range.getMax() || input.length < range.getMin()) {

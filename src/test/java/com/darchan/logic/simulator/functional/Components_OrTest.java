@@ -14,39 +14,39 @@ class Components_OrTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void orShouldReturnExpectedValue(boolean[] inputs, boolean expected) {
+    void orShouldReturnExpectedValue(Boolean[] inputs, boolean expected) {
         assertEquals(expected, Components.or(inputs));
     }
 
     static Stream<Arguments> getInputs() {
         return Stream.of(
-                Arguments.of(new boolean[]{false, false}, false),
-                Arguments.of(new boolean[]{true, false}, true),
-                Arguments.of(new boolean[]{false, true}, true),
-                Arguments.of(new boolean[]{true, true}, true),
+                Arguments.of(new Boolean[]{false, false}, false),
+                Arguments.of(new Boolean[]{true, false}, true),
+                Arguments.of(new Boolean[]{false, true}, true),
+                Arguments.of(new Boolean[]{true, true}, true),
 
 
-                Arguments.of(new boolean[]{false, false, false}, false),
-                Arguments.of(new boolean[]{true, false, false}, true),
-                Arguments.of(new boolean[]{false, true, false}, true),
-                Arguments.of(new boolean[]{true, true, false}, true),
-                Arguments.of(new boolean[]{false, false, true}, true),
-                Arguments.of(new boolean[]{true, false, true}, true),
-                Arguments.of(new boolean[]{false, true, true}, true),
-                Arguments.of(new boolean[]{true, true, true}, true)
+                Arguments.of(new Boolean[]{false, false, false}, false),
+                Arguments.of(new Boolean[]{true, false, false}, true),
+                Arguments.of(new Boolean[]{false, true, false}, true),
+                Arguments.of(new Boolean[]{true, true, false}, true),
+                Arguments.of(new Boolean[]{false, false, true}, true),
+                Arguments.of(new Boolean[]{true, false, true}, true),
+                Arguments.of(new Boolean[]{false, true, true}, true),
+                Arguments.of(new Boolean[]{true, true, true}, true)
         );
     }
 
     @ParameterizedTest
     @MethodSource("getInputsForExceptions")
-    void orShouldThrowException(Class<? extends Throwable> clazz, boolean[] input) {
+    void orShouldThrowException(Class<? extends Throwable> clazz, Boolean[] input) {
         assertThrows(clazz, () -> Components.or(input));
     }
 
     static Stream<Arguments> getInputsForExceptions() {
         return Stream.of(
             Arguments.of(IllegalArgumentException.class, null),
-            Arguments.of(RangeValidationException.class, new boolean[1])
+            Arguments.of(RangeValidationException.class, new Boolean[1])
         );
     }
 

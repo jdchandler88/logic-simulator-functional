@@ -16,49 +16,49 @@ class Components_RegisterTest {
 
     @ParameterizedTest
     @MethodSource("getArguments")
-    void registerLatchesWhenItShould(boolean prevClk, boolean newClk, boolean[] prevValue, boolean[] newValue, boolean[] expected) {
+    void registerLatchesWhenItShould(boolean prevClk, boolean newClk, Boolean[] prevValue, Boolean[] newValue, Boolean[] expected) {
         assertArrayEquals(expected, Components.register(prevClk, newClk, prevValue, newValue));
     }
 
     static Stream<Arguments> getArguments() {
         return Stream.of(
-                Arguments.of(false, false, new boolean[]{false, false}, new boolean[]{true, true}, new boolean[]{false, false}), //clock was and still is low
-                Arguments.of(false, true, new boolean[]{false, false}, new boolean[]{true, true}, new boolean[]{true, true}), //clock was low and has risen (REGISTER SHOULD LATCH NEW VALUE!)
-                Arguments.of(true, false, new boolean[]{false, false}, new boolean[]{true, true}, new boolean[]{false, false}), //clock was high and has fallen
-                Arguments.of(true, true, new boolean[]{false, false}, new boolean[]{true, true}, new boolean[]{false, false})      //clock was and still is high
+                Arguments.of(false, false, new Boolean[]{false, false}, new Boolean[]{true, true}, new Boolean[]{false, false}), //clock was and still is low
+                Arguments.of(false, true, new Boolean[]{false, false}, new Boolean[]{true, true}, new Boolean[]{true, true}), //clock was low and has risen (REGISTER SHOULD LATCH NEW VALUE!)
+                Arguments.of(true, false, new Boolean[]{false, false}, new Boolean[]{true, true}, new Boolean[]{false, false}), //clock was high and has fallen
+                Arguments.of(true, true, new Boolean[]{false, false}, new Boolean[]{true, true}, new Boolean[]{false, false})      //clock was and still is high
         );
     }
 
     @ParameterizedTest
     @MethodSource("getNulls")
-    void shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull(boolean[] prevValue, boolean[] newValue) {
+    void shouldThrowIllegalArgumentExceptionWhenAnyInputIsNull(Boolean[] prevValue, Boolean[] newValue) {
         assertThrows(IllegalArgumentException.class, () -> Components.register(true, true, prevValue, newValue));
     }
 
     static Stream<Arguments> getNulls() {
         return Stream.of(
-                Arguments.of(null, new boolean[2]),
-                Arguments.of(new boolean[2], null),
+                Arguments.of(null, new Boolean[2]),
+                Arguments.of(new Boolean[2], null),
                 Arguments.of(null, null)
         );
     }
 
     @ParameterizedTest
     @MethodSource("getBadLengthArgs")
-    void shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength(boolean[] prevValue, boolean[] newValue) {
+    void shouldThrowRangeValidationExceptionIfAnyInputIsZeroLength(Boolean[] prevValue, Boolean[] newValue) {
         assertThrows(RangeValidationException.class, () -> Components.register(true, true, prevValue, newValue));
     }
 
     static Stream<Arguments> getBadLengthArgs() {
         return Stream.of(
-                Arguments.of(new boolean[0], new boolean[2]),
-                Arguments.of(new boolean[2], new boolean[0])
+                Arguments.of(new Boolean[0], new Boolean[2]),
+                Arguments.of(new Boolean[2], new Boolean[0])
         );
     }
 
     @Test
     void shouldThrowRegisterWidthMismatchExceptionIfWidthsAreDifferentLength() {
-        assertThrows(RegisterInputWidthMismatchException.class, () -> Components.register(true, true, new boolean[2], new boolean[3]));
+        assertThrows(RegisterInputWidthMismatchException.class, () -> Components.register(true, true, new Boolean[2], new Boolean[3]));
     }
 
 

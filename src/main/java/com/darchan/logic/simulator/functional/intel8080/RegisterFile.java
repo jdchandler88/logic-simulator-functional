@@ -19,25 +19,25 @@ public class RegisterFile {
      */
     private final Range PC_SP_WIDTH = new Range(16, 16);
 
-    private final boolean[] f;
+    private final Boolean[] f;
 
-    private final boolean[] a;
+    private final Boolean[] a;
 
-    private final boolean[] b;
+    private final Boolean[] b;
 
-    private final boolean[] c;
+    private final Boolean[] c;
 
-    private final boolean[] d;
+    private final Boolean[] d;
 
-    private final boolean[] e;
+    private final Boolean[] e;
 
-    private final boolean[] h;
+    private final Boolean[] h;
 
-    private final boolean[] l;
+    private final Boolean[] l;
 
-    private final boolean[] pc;
+    private final Boolean[] pc;
 
-    private final boolean[] sp;
+    private final Boolean[] sp;
 
     /**
      * Creates register file with the specified input data
@@ -52,7 +52,7 @@ public class RegisterFile {
      * @param pc program counter
      * @param sp stack pointer
      */
-    public RegisterFile(boolean[] f, boolean[] a, boolean[] b, boolean[] c, boolean[] d, boolean[] e, boolean[] h, boolean[] l, boolean[] pc, boolean[] sp) {
+    public RegisterFile(Boolean[] f, Boolean[] a, Boolean[] b, Boolean[] c, Boolean[] d, Boolean[] e, Boolean[] h, Boolean[] l, Boolean[] pc, Boolean[] sp) {
         this.f = Components.validateNotNullAndWidth(f, REGISTER_WIDTH);
         this.a = Components.validateNotNullAndWidth(a, REGISTER_WIDTH);
         this.b = Components.validateNotNullAndWidth(b, REGISTER_WIDTH);
@@ -69,7 +69,7 @@ public class RegisterFile {
      * Gets A, accumulator
      * @return
      */
-    public boolean[] getA() {
+    public Boolean[] getA() {
         return a;
     }
 
@@ -77,7 +77,7 @@ public class RegisterFile {
      * Gets B, high word for BC pair
      * @return
      */
-    public boolean[] getB() {
+    public Boolean[] getB() {
         return b;
     }
 
@@ -85,7 +85,7 @@ public class RegisterFile {
      * Gets C, low word for BC pair
      * @return
      */
-    public boolean[] getC() {
+    public Boolean[] getC() {
         return c;
     }
 
@@ -93,7 +93,7 @@ public class RegisterFile {
      * Gets D, high word for DE pair
      * @return
      */
-    public boolean[] getD() {
+    public Boolean[] getD() {
         return d;
     }
 
@@ -101,7 +101,7 @@ public class RegisterFile {
      * Gets E, low word for DE pair
      * @return
      */
-    public boolean[] getE() {
+    public Boolean[] getE() {
         return e;
     }
 
@@ -119,7 +119,7 @@ public class RegisterFile {
      *
      * @return
      */
-    public boolean[] getF() {
+    public Boolean[] getF() {
         return f;
     }
 
@@ -127,7 +127,7 @@ public class RegisterFile {
      * Gets H, high word for HL pair
      * @return
      */
-    public boolean[] getH() {
+    public Boolean[] getH() {
         return h;
     }
 
@@ -135,7 +135,7 @@ public class RegisterFile {
      * Gets L, low word for HL pair
      * @return
      */
-    public boolean[] getL() {
+    public Boolean[] getL() {
         return l;
     }
 
@@ -143,7 +143,7 @@ public class RegisterFile {
      * Gets program counter
      * @return
      */
-    public boolean[] getPc() {
+    public Boolean[] getPc() {
         return pc;
     }
 
@@ -151,7 +151,7 @@ public class RegisterFile {
      * Gets stack pointer
      * @return
      */
-    public boolean[] getSp() {
+    public Boolean[] getSp() {
         return sp;
     }
 }

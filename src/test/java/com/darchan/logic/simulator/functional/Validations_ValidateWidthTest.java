@@ -11,23 +11,23 @@ class Validations_ValidateWidthTest {
 
     @Test
     void shouldReturnFalseWhenInputIsGreaterThanRange() {
-        assertThrows(RangeValidationException.class, () -> Validations.validateWidthInRange(new boolean[5], testRange));
+        assertThrows(RangeValidationException.class, () -> Validations.validateWidthInRange(new Boolean[5], testRange));
     }
 
     @Test
     void shouldReturnFalseWhenInputIsLessThanRange() {
-        assertThrows(RangeValidationException.class, () -> Validations.validateWidthInRange(new boolean[1], testRange));
+        assertThrows(RangeValidationException.class, () -> Validations.validateWidthInRange(new Boolean[1], testRange));
     }
 
     @Test
     void shouldReturnTrueWhenInputIsWithinRange() {
-        boolean[] input = new boolean[3];
+        Boolean[] input = new Boolean[3];
         assertEquals(input, Validations.validateWidthInRange(input, testRange));
     }
 
     @Test
     void shouldThrowExceptionIfRangeIsNull() {
-        assertThrows(IllegalArgumentException.class, () -> Validations.validateWidthInRange(new boolean[3], null));
+        assertThrows(IllegalArgumentException.class, () -> Validations.validateWidthInRange(new Boolean[3], null));
     }
 
     @Test

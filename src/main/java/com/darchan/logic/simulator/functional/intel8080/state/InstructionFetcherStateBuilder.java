@@ -9,15 +9,17 @@ package com.darchan.logic.simulator.functional.intel8080.state;
  */
 public class InstructionFetcherStateBuilder {
 
+    private boolean clock;
     private boolean idle;
     private boolean fetchByte1;
     private boolean fetchByte2;
     private boolean fetchByte3;
 
     /**
-     * Creates initial {@link InstructionFetcherState}. The 'idle' state is set to true.
+     * Creates initial {@link InstructionFetcherState}. The 'idle' state is set to true. Everything else is set to false
      */
     public InstructionFetcherStateBuilder() {
+        this.clock = false;
         this.idle = true;
         this.fetchByte1 = false;
         this.fetchByte2 = false;
@@ -29,10 +31,16 @@ public class InstructionFetcherStateBuilder {
      * @param toCopy state to copy
      */
     public InstructionFetcherStateBuilder(InstructionFetcherState toCopy) {
+        this.clock = toCopy.clock;
         this.idle = toCopy.idle;
         this.fetchByte1 = toCopy.fetchByte1;
         this.fetchByte2 = toCopy.fetchByte2;
         this.fetchByte3 = toCopy.fetchByte3;
+    }
+
+    public InstructionFetcherStateBuilder setClock(boolean clock) {
+        this.clock = clock;
+        return this;
     }
 
     public InstructionFetcherStateBuilder setIdle(boolean idle) {
@@ -56,7 +64,7 @@ public class InstructionFetcherStateBuilder {
     }
 
     public InstructionFetcherState createInstructionDecoderState() {
-        return new InstructionFetcherState(idle, fetchByte1, fetchByte2, fetchByte3);
+        return new InstructionFetcherState(clock, idle, fetchByte1, fetchByte2, fetchByte3);
     }
 
 }

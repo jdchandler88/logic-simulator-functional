@@ -12,36 +12,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RegisterFileTest {
 
-    private static final boolean[] SMALL = new boolean[7];
+    private static final Boolean[] SMALL = new Boolean[7];
 
-    private static final boolean[] VALUE = new boolean[8];
+    private static final Boolean[] VALUE = new Boolean[8];
 
-    private static final boolean[] VALUE16 = new boolean[16];
+    private static final Boolean[] VALUE16 = new Boolean[16];
 
-    private static final boolean[] BIG = new boolean[17];
+    private static final Boolean[] BIG = new Boolean[17];
 
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void storedValueIsExpected(boolean[] expected, boolean[] retrieved) {
+    void storedValueIsExpected(Boolean[] expected, Boolean[] retrieved) {
         assertArrayEquals(expected, retrieved);
     }
 
     static Stream<Arguments> getInputs() {
-        boolean[] f = createArrayWithNthBitEnabled(0);
-        boolean[] a = createArrayWithNthBitEnabled(0);
-        boolean[] b = createArrayWithNthBitEnabled(0);
-        boolean[] c = createArrayWithNthBitEnabled(0);
-        boolean[] d = createArrayWithNthBitEnabled(0);
-        boolean[] e = createArrayWithNthBitEnabled(0);
-        boolean[] h = createArrayWithNthBitEnabled(0);
-        boolean[] l = createArrayWithNthBitEnabled(0);
+        Boolean[] f = createArrayWithNthBitEnabled(0);
+        Boolean[] a = createArrayWithNthBitEnabled(0);
+        Boolean[] b = createArrayWithNthBitEnabled(0);
+        Boolean[] c = createArrayWithNthBitEnabled(0);
+        Boolean[] d = createArrayWithNthBitEnabled(0);
+        Boolean[] e = createArrayWithNthBitEnabled(0);
+        Boolean[] h = createArrayWithNthBitEnabled(0);
+        Boolean[] l = createArrayWithNthBitEnabled(0);
 
-        boolean[] pc = new boolean[16];
+        Boolean[] pc = new Boolean[16];
         Arrays.fill(pc, false);
         pc[10] = true;
 
-        boolean[] sp = new boolean[16];
+        Boolean[] sp = new Boolean[16];
         Arrays.fill(sp, false);
         sp[11] = true;
 
@@ -60,8 +60,8 @@ class RegisterFileTest {
         );
     }
 
-    static boolean[] createArrayWithNthBitEnabled(int n) {
-        boolean[] array = new boolean[8];
+    static Boolean[] createArrayWithNthBitEnabled(int n) {
+        Boolean[] array = new Boolean[8];
         Arrays.fill(array, false);
         array[n] = true;
         return array;
@@ -69,7 +69,7 @@ class RegisterFileTest {
 
     @ParameterizedTest
     @MethodSource("getInputsForExceptions")
-    void registerFileShouldThrowException(Class<? extends Throwable> clazz, boolean[] f, boolean[] a, boolean[] b, boolean[] c, boolean[] d, boolean[] e, boolean[] h, boolean[] l, boolean[] pc, boolean[] sp) {
+    void registerFileShouldThrowException(Class<? extends Throwable> clazz, Boolean[] f, Boolean[] a, Boolean[] b, Boolean[] c, Boolean[] d, Boolean[] e, Boolean[] h, Boolean[] l, Boolean[] pc, Boolean[] sp) {
         assertThrows(clazz, () -> new RegisterFile(f, a, b, c, d, e, h, l, pc, sp));
     }
 

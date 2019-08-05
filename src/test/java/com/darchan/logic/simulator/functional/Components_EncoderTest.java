@@ -16,28 +16,28 @@ class Components_EncoderTest {
 
     @ParameterizedTest
     @MethodSource("getInputs")
-    void encodeShouldHaveExpectedOutput(boolean[] input, boolean[] expected) {
+    void encodeShouldHaveExpectedOutput(Boolean[] input, Boolean[] expected) {
         assertArrayEquals(expected, Components.encoder(input));
     }
 
     static Stream<Arguments> getInputs() {
         return Stream.of(
-                Arguments.of(new boolean[]{true, false}, new boolean[]{false}),
-                Arguments.of(new boolean[]{false, true}, new boolean[]{true}),
+                Arguments.of(new Boolean[]{true, false}, new Boolean[]{false}),
+                Arguments.of(new Boolean[]{false, true}, new Boolean[]{true}),
 
-                Arguments.of(new boolean[]{true, false, false, false}, new boolean[]{false, false}),
-                Arguments.of(new boolean[]{false, true, false, false}, new boolean[]{true, false}),
-                Arguments.of(new boolean[]{false, false, true, false}, new boolean[]{false, true}),
-                Arguments.of(new boolean[]{false, false, false, true}, new boolean[]{true, true}),
+                Arguments.of(new Boolean[]{true, false, false, false}, new Boolean[]{false, false}),
+                Arguments.of(new Boolean[]{false, true, false, false}, new Boolean[]{true, false}),
+                Arguments.of(new Boolean[]{false, false, true, false}, new Boolean[]{false, true}),
+                Arguments.of(new Boolean[]{false, false, false, true}, new Boolean[]{true, true}),
 
-                Arguments.of(new boolean[]{true, false, false, false, false, false, false, false}, new boolean[]{false, false, false}),
-                Arguments.of(new boolean[]{false, true, false, false, false, false, false, false}, new boolean[]{true, false, false}),
-                Arguments.of(new boolean[]{false, false, true, false, false, false, false, false}, new boolean[]{false, true, false}),
-                Arguments.of(new boolean[]{false, false, false, true, false, false, false, false}, new boolean[]{true, true, false}),
-                Arguments.of(new boolean[]{false, false, false, false, true, false, false, false}, new boolean[]{false, false, true}),
-                Arguments.of(new boolean[]{false, false, false, false, false, true, false, false}, new boolean[]{true, false, true}),
-                Arguments.of(new boolean[]{false, false, false, false, false, false, true, false}, new boolean[]{false, true, true}),
-                Arguments.of(new boolean[]{false, false, false, false, false, false, false, true}, new boolean[]{true, true, true})
+                Arguments.of(new Boolean[]{true, false, false, false, false, false, false, false}, new Boolean[]{false, false, false}),
+                Arguments.of(new Boolean[]{false, true, false, false, false, false, false, false}, new Boolean[]{true, false, false}),
+                Arguments.of(new Boolean[]{false, false, true, false, false, false, false, false}, new Boolean[]{false, true, false}),
+                Arguments.of(new Boolean[]{false, false, false, true, false, false, false, false}, new Boolean[]{true, true, false}),
+                Arguments.of(new Boolean[]{false, false, false, false, true, false, false, false}, new Boolean[]{false, false, true}),
+                Arguments.of(new Boolean[]{false, false, false, false, false, true, false, false}, new Boolean[]{true, false, true}),
+                Arguments.of(new Boolean[]{false, false, false, false, false, false, true, false}, new Boolean[]{false, true, true}),
+                Arguments.of(new Boolean[]{false, false, false, false, false, false, false, true}, new Boolean[]{true, true, true})
         );
     }
 
@@ -48,17 +48,17 @@ class Components_EncoderTest {
 
     @Test
     void shouldThrowExceptionIfInputIsNotAPowerOfTwo() {
-        assertThrows(EncoderInputWidthException.class, () -> Components.encoder(new boolean[3]));
+        assertThrows(EncoderInputWidthException.class, () -> Components.encoder(new Boolean[3]));
     }
 
     @Test
     void shouldThrowExceptionIfNoInputsAreOn() {
-        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new boolean[]{false, false}));
+        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new Boolean[]{false, false}));
     }
 
     @Test
     void shouldThrowExceptionIfMoreThanOneInputIsOn() {
-        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new boolean[]{true, true}));
+        assertThrows(InvalidEncoderInputValueException.class, () -> Components.encoder(new Boolean[]{true, true}));
     }
 
 }
