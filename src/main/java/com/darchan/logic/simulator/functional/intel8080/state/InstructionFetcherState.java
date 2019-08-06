@@ -1,5 +1,7 @@
 package com.darchan.logic.simulator.functional.intel8080.state;
 
+import java.util.Objects;
+
 /**
  * Internal state for the instruction fetcher. This state is for controlling how many bytes to fetch from memory
  * during instruction fetch.
@@ -49,4 +51,32 @@ public class InstructionFetcherState {
         this.fetchByte3 = fetchByte3;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        InstructionFetcherState that = (InstructionFetcherState) o;
+        return clock == that.clock &&
+                idle == that.idle &&
+                fetchByte1 == that.fetchByte1 &&
+                fetchByte2 == that.fetchByte2 &&
+                fetchByte3 == that.fetchByte3;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(clock, idle, fetchByte1, fetchByte2, fetchByte3);
+    }
+
+    @Override
+    public String toString() {
+        return "InstructionFetcherState{" +
+                "clock=" + clock +
+                ", idle=" + idle +
+                ", fetchByte1=" + fetchByte1 +
+                ", fetchByte2=" + fetchByte2 +
+                ", fetchByte3=" + fetchByte3 +
+                '}';
+
+    }
 }

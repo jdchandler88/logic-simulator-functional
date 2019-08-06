@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d00136ec-e1ef-4f93-84e1-426fe4771524" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_NotTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/intel8080/InstructionFetcherControlTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/Validations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/exception/InvalidEncoderInputValueException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/InstructionDecoderControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/InstructionFetcherControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/Memory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/RegisterFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/RegisterFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/InstructionFetcherControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/InstructionFetcherControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/state/InstructionFetcherState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/state/InstructionFetcherState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/state/InstructionFetcherStateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/state/InstructionFetcherStateBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_AndTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_DecoderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_EncoderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_FullAdderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_FullAdderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_OrTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_RegisterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Components_XorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_ValidateWidthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/Validations_ValidateWidthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/intel8080/RegisterFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/darchan/logic/simulator/functional/intel8080/RegisterFileTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,8 +91,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -140,12 +125,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.13002366" />
     <property name="project.structure.side.proportion" value="0.33392382" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.darchan.logic.simulator.functional.intel8080.state" />
       <recent name="com.darchan.logic.simulator.functional.intel8080" />
+      <recent name="com.darchan.logic.simulator.functional.intel8080.state" />
       <recent name="com.darchan.logic.simulator.functional.exception" />
       <recent name="com.darchan.logic.simulator.functional" />
     </key>
@@ -165,62 +150,106 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Components_NotTest.notShouldReturnInverseOfInput">
-    <configuration name="All in logic-simulator-functional.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in logic-simulator-functional.test (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in logic-simulator-functional.test (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in logic-simulator-functional.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="logic-simulator-functional.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Components_NotTest.notShouldReturnInverseOfInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InstructionFetcherControlTest.shouldTransitionProperly">
+    <configuration name="InstructionFetcherControlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logic-simulator-functional.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.darchan.logic.simulator.functional.*" />
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.intel8080.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional" />
-      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.Components_NotTest" />
-      <option name="METHOD_NAME" value="notShouldReturnInverseOfInput(boolean)" />
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.intel8080" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest" />
+      <option name="METHOD_NAME" value="shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState,java.lang.Boolean,[Ljava.lang.Boolean;,com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InstructionFetcherControlTest.shouldTransitionProperly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.intel8080.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.intel8080" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest" />
+      <option name="METHOD_NAME" value="shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState,java.lang.Boolean,[Ljava.lang.Boolean;,com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.intel8080.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.intel8080" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest" />
+      <option name="METHOD_NAME" value="shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState,java.lang.Boolean,[Ljava.lang.Boolean;,com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest]/[test-template:shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState, java.lang.Boolean, %5BLjava.lang.Boolean;, com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)]/[test-template-invocation:#2]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.intel8080.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.intel8080" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest" />
+      <option name="METHOD_NAME" value="shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState,java.lang.Boolean,[Ljava.lang.Boolean;,com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest]/[test-template:shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState, java.lang.Boolean, %5BLjava.lang.Boolean;, com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)]/[test-template-invocation:#2]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logic-simulator-functional.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.darchan.logic.simulator.functional.intel8080.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.darchan.logic.simulator.functional.intel8080" />
+      <option name="MAIN_CLASS_NAME" value="com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest" />
+      <option name="METHOD_NAME" value="shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState,java.lang.Boolean,[Ljava.lang.Boolean;,com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.darchan.logic.simulator.functional.intel8080.InstructionFetcherControlTest]/[test-template:shouldTransitionProperly(com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState, java.lang.Boolean, %5BLjava.lang.Boolean;, com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState)]/[test-template-invocation:#2]" />
+      </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Components_NotTest.notShouldReturnInverseOfInput" />
-        <item itemvalue="JUnit.All in logic-simulator-functional.test (1)" />
-        <item itemvalue="JUnit.All in logic-simulator-functional.test" />
-        <item itemvalue="JUnit.All in logic-simulator-functional.test (5)" />
-        <item itemvalue="JUnit.All in logic-simulator-functional.test (4)" />
+        <item itemvalue="JUnit.InstructionFetcherControlTest.shouldTransitionProperly" />
+        <item itemvalue="JUnit.[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (3)" />
+        <item itemvalue="JUnit.[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (2)" />
+        <item itemvalue="JUnit.[2] InstructionFetcherState{clock=false, idle=true, fetchByte1=false, fetchByte2=false, fetchByte3=false}, true, [true, true, true, true, true, true, true, true], InstructionFetcherState{clock=true, idle=false, fetchByte1=true, fetchByte2=false, fetchByte3=false} (1)" />
+        <item itemvalue="JUnit.InstructionFetcherControlTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +273,7 @@
       <workItem from="1562210339673" duration="3797000" />
       <workItem from="1562640623660" duration="8000" />
       <workItem from="1564518369710" duration="35108000" />
-      <workItem from="1564952072344" duration="7933000" />
+      <workItem from="1564952072344" duration="15343000" />
     </task>
     <task id="LOCAL-00001" summary="setting build.gradle so that intellij can run coverage. required unsetting ant as tool">
       <created>1562211137957</created>
@@ -379,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564952953339</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="continued work on instruction fetch control">
+      <created>1564979138767</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1564979138767</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +445,19 @@
     <MESSAGE value="implemented register file state" />
     <MESSAGE value="added program counter and stack pointer to register file" />
     <MESSAGE value="created state to represent instruction fetch control state and its tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="created state to represent instruction fetch control state and its tests" />
+    <MESSAGE value="continued work on instruction fetch control" />
+    <option name="LAST_COMMIT_MESSAGE" value="continued work on instruction fetch control" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/darchan/logic/simulator/functional/intel8080/InstructionFetcherControl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/logic_simulator_functional$All_in_logic_simulator_functional_test.ic" NAME="All in logic-simulator-functional.test Coverage Results" MODIFIED="1564978933672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

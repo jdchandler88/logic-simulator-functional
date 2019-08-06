@@ -2,25 +2,24 @@ package com.darchan.logic.simulator.functional.intel8080;
 
 import com.darchan.logic.simulator.functional.Components;
 import com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherState;
+import com.darchan.logic.simulator.functional.intel8080.state.InstructionFetcherStateBuilder;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 import static com.darchan.logic.simulator.functional.Components.*;
 
 public class InstructionFetcherControl {
 
-    private static final Boolean[][] TWO_BYTE_INSTRUCTIONS = new Boolean[][]{
-            {false, false, false, false, false, false, false, false}
+    static final Boolean[][] TWO_BYTE_INSTRUCTIONS = new Boolean[][]{
+            {false, false, false, false, false, false, false, false},
+            {false, false, false, false, false, false, false, true}
     };
 
-    private static Boolean[][] THREE_BYTE_INSTRUCTIONS = new Boolean[][]{
-            {false, false, false, false, false, false, false, true}
+    static Boolean[][] THREE_BYTE_INSTRUCTIONS = new Boolean[][]{
+            {false, false, false, false, false, false, true, false},
+            {false, false, false, false, false, false, true, true}
     };
 
     private static final List<Function<Boolean[], Boolean>> IS_TWO_BYTES;
@@ -43,18 +42,30 @@ public class InstructionFetcherControl {
     }
 
 
-    public InstructionFetcherState tick(boolean clock, boolean fetch, Boolean[] instructionRegister, InstructionFetcherState prevState) {
+    public static InstructionFetcherState tick(boolean clock, boolean fetch, Boolean[] instructionRegister, InstructionFetcherState prevState) {
 
         //will need to un-hardcode these later. only working on 1-byte instructions for now
         boolean is2ByteInstruction = is2ByteInstruction(instructionRegister);
         boolean is3ByteInstruction = is3ByteInstruction(instructionRegister);
 
 
-        boolean twoOrThreeByteInstruction = or(is2ByteInstruction, is3ByteInstruction);
-        boolean idleTransitions = or(not(fetch), and(prevState.fetchByte1, twoOrThreeByteInstruction), and(prevState.fetchByte2, is3ByteInstruction), prevState.fetchByte3);
-        boolean idle = Components.register(clock, prevState.clock, new Boolean[]{idleTransitions}, new Boolean[]{prevState.idle})[0];
+        boolean isTwoOrThreeByteInstruction = or(is2ByteInstruction, is3ByteInstruction);
+        boolean idleTransition = or(and(prevState.idle, not(fetch)), and(prevState.fetchByte1, not(isTwoOrThreeByteInstruction)), and(prevState.fetchByte2, is3ByteInstruction), prevState.fetchByte3);
+        boolean idle = Components.register(prevState.clock, clock, new Boolean[]{prevState.idle}, new Boolean[]{idleTransition})[0];
 
-        return null;
+        boolean fetchFirstByte = Components.register(prevState.clock, clock, new Boolean[]{prevState.fetchByte1}, new Boolean[]{and(prevState.idle, fetch)})[0];
+
+        boolean fetchSecondByte = Components.register(prevState.clock, clock, new Boolean[]{prevState.fetchByte2}, new Boolean[]{and(prevState.fetchByte1, isTwoOrThreeByteInstruction)})[0];
+
+        boolean fetchThirdByte = Components.register(prevState.clock, clock, new Boolean[]{prevState.fetchByte3}, new Boolean[]{and(prevState.fetchByte2, is3ByteInstruction)})[0];
+
+        return new InstructionFetcherStateBuilder()
+                .setClock(clock)
+                .setIdle(idle)
+                .setFetchByte1(fetchFirstByte)
+                .setFetchByte2(fetchSecondByte)
+                .setFetchByte3(fetchThirdByte)
+                .createInstructionDecoderState();
     }
 
     private static boolean is2ByteInstruction(Boolean[] firstInstructionByte) {
